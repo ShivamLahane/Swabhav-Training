@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>To-Do-List-App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='task.css'>
+    <script src='angular.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.min.js" integrity="sha512-/uxeq6VcJ+do+PtGgWZwRL/Z63r53cK6yek3NzvQwce6aCeheKRD59IuRsEFuNU8b0B/lZ6fUx1fncf0wMIm5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <body>
+
+        <div class="container-fluid">
+            
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12" ng-app = "toDoModule">
+
+                    <section ng-controller = "taskController">
+                        <h1>To Do List</h1>
+                        <br>
+                        
+                        <textarea id="txt" cols="40" rows="4" ng-model = "newTask"></textarea> 
+                        &nbsp;
+                        <button id = "add" class = "btn btn-lg btn-success" ng-click = "addTask()">Add</button>
+                        <br><br>
+    
+                        <ul>
+                            <li ng-repeat = "task in taskList" ng-if = "task.isDeleted == false">
+                                {{ task.text }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                {{ getRelativeTime(task.time) }} 
+                                <span class="close" ng-click = "deletetask(task.time)">&times;</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="ToDoModule.js"></script>
+
+    </body>
+</body>
+</html>

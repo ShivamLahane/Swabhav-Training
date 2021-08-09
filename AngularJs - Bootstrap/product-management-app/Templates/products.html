@@ -1,0 +1,44 @@
+<br>
+<br>
+<br>
+<section ng-controller = 'ProductListController'>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid bg-primary">
+              <div class="navbar-header">
+                <h4>Product List</h4>
+              </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            Filter By :        <input type="text" ng-model = 'searchText'></p>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><button type="button" id = 'ShowHideButton' ng-click = 'hideOrShowImages()' class="btn btn-primary">Hide Image</button></th>
+                    <th>Product</th>
+                    <th>Code</th>
+                    <th>Release Date</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Star Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-click = 'directTo(product.productCode)' ng-repeat = 'product in productList | filter : searchText'>
+                    <td><img class="img img-fluid" src= "{{ product.imageUrl }}" 
+                    style="height: 50px; width: 50px; display: block;"> </td>
+                    <td>{{ product.productName }}</a></td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.releaseDate }}</td>
+                    <td>{{ product.price | currency : '$' : 2}}</td>
+                    <td>{{ product.starRating }}</td>
+                    <td>
+                        <div star-rating rating-value = 'product.starRating' max = 5></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

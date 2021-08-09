@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>
+            button to hide/show image.
+        </title> 
+
+    </head>
+
+    <body>
+
+        <button id = "button" onclick="hideOrShow()" >hide</button>
+        <br>
+
+        <div id = "image">
+            <img src = "C:\Users\Shivam\Documents\Code Stuff\JS Begineer's Guide\nodeJS\exercise-02\781833.jpg" alt = "breaking-bad-wallpaper" 
+            height="500m" width="400" style = "display: block;">
+        </div>
+
+        <script>
+            function hideOrShow()
+            {
+                var image = document.getElementById("image");
+                var button = document.getElementById("button");
+                if (image.style.display === "none") 
+                {
+                    image.style.display = "block";
+                    button.innerHTML = "hide";
+                    return ;
+                } 
+                image.style.display = "none";
+                button.innerHTML = "show";
+            }
+        </script>
+    </body>
+
+</html>

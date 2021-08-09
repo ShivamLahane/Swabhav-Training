@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>
+            Local storage 
+        </title> 
+
+    </head>
+
+    <body>
+
+        <h2>Storing Local Storage Objects</h2>
+
+        <script>
+            // storing var in Local storage
+            var name = "Shivam"
+            window.localStorage.setItem('name', name);
+
+            // storing JS object in local storage
+            const person = 
+            {
+                userId : "Shivam Lahane",
+                password : "Shivam123",
+            }
+            window.localStorage.setItem( 'loginInfo', JSON.stringify(person));
+
+            // printing local storage info
+            for (var i = 0; i < localStorage.length; i++)
+            {
+                console.log(localStorage.getItem(localStorage.key(i)));
+            }
+        
+            // retrieving from local storage
+            console.log(JSON.parse(window.localStorage.getItem('loginInfo')));
+
+            // removing data from local storage
+            window.localStorage.removeItem('name');
+
+            // printing all the local storage items
+            for (var i = 0; i < localStorage.length; i++)
+            {
+                console.log(localStorage.getItem(localStorage.key(i)));
+            }
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ACME</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='angular.js-lib/angular.js'></script>
+    <script src="angular.js-lib/ngRoute.js"></script>
+    <script src="DB/products.json"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body ng-app = 'ProductManagementModule'>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#/">ACME Product Management</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/products">Product List</a></li>
+          </ul>
+        </div>
+      </nav>
+
+        <div ng-view>
+
+        </div>
+
+        <script src="module.js"></script>
+        <script src="config.js"></script>
+</body>
+</html>

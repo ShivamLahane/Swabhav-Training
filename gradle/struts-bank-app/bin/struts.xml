@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+  "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  <package name="main" extends="struts-default">
+  
+    <action name="home" class="com.techlabs.actions.HomeAction">
+      <result name="guest">
+        /views/guestHome.jsp
+      </result>
+      <result name="user">
+        /views/userHome.jsp
+      </result>
+    </action>
+    
+     <action name="register" class="com.techlabs.actions.RegisterAction">
+      <result name="success">
+        /views/register.jsp
+      </result>
+      <result name="error">
+        /views/userHome.jsp
+      </result>
+    </action>
+    
+    <action name="doRegister" class="com.techlabs.actions.RegisterAction" method = 'doRegister'>
+      <result name="success">
+        /views/login.jsp
+      </result>
+      <result name="error">
+        /views/register.jsp
+      </result>
+    </action>
+    
+     <action name="login" class="com.techlabs.actions.LoginAction">
+      <result name="success">
+        /views/login.jsp
+      </result>
+      <result name="error" type="redirect">
+        home
+      </result>
+    </action>
+    
+     <action name="doLogin" class="com.techlabs.actions.LoginAction" method = 'doLogin'>
+      <result name="success">
+        /views/userHome.jsp
+      </result>
+      <result name="passbook" type="redirect">
+        passbook
+      </result>
+      <result name="transaction" type="redirect">
+        transaction
+      </result>
+      <result name="error">
+        /views/login.jsp
+      </result>
+    </action>
+    
+     <action name="logout" class="com.techlabs.actions.LogoutAction">
+      <result name="success" type="redirect">
+       home
+      </result>
+    </action>
+    
+     <action name="passbook" class="com.techlabs.actions.PassbookAction">
+      <result name="success">
+        /views/passbook.jsp
+      </result>
+      <result name="error">
+        /views/login.jsp
+      </result>
+    </action>
+    
+     <action name="transaction" class="com.techlabs.actions.TransactionAction">
+      <result name="success">
+        /views/transaction.jsp
+      </result>
+      <result name="error">
+        /views/login.jsp
+      </result>
+    </action>
+    
+      <action name="doTransaction" class="com.techlabs.actions.TransactionAction" method = 'doTransaction'>
+      <result name="success">
+        /views/userHome.jsp
+      </result>
+      <result name="error">
+        /views/transaction.jsp
+      </result>
+    </action>
+    
+	<action name="doExport" class="com.techlabs.actions.ExportAction">
+      <result name="success" type="stream">
+        <param name="contentType">text/csv</param>
+        <param name="inputName">fileInputStream</param>
+        <param name="contentDisposition">attachment;filename="Passbook.csv"</param>
+        <param name="bufferSize">1024</param>
+      </result>
+    </action>
+    
+  </package>
+</struts>

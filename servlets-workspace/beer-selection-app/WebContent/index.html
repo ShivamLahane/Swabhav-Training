@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class = 'jumbotron'>
+		<h1 class = 'text-center' >Beer Selection Page</h1>
+	</div>
+	
+	<h3>Select Beer Characteristics</h3>
+	<form action = 'BeerSelect' method = 'POST'>
+		<p>Color : </p>
+		<select name = 'color' size = '1'>
+			<option value = 'light'>light</option>
+			<option value = 'amber'>amber</option>
+			<option value = 'dark'>dark</option>
+			<option value = 'brown'>brown</option>
+		</select>
+		<input type = 'submit'>
+	</form>
+</body>
+</html>

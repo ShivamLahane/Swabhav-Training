@@ -1,0 +1,27 @@
+<section>
+    <h1 [innerText] = 'student.name'> </h1>
+    <h1 [innerText] = '"student.name"' ></h1>
+    <div [style.background] = 'cgpaToColor(student)'>
+        <h1 [innerText] = 'student.cgpa'></h1>
+    </div>
+</section>
+
+<section>
+    <input type="button" (click) = "load()" value = 'Load'>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">name</th>
+                <th scope="col">cgpa</th>
+                <th scope="col">roll No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr [style.background] = 'cgpaToColor(student)' *ngFor = "let student of students">
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.cgpa }}</td>
+                    <td>{{ student.rollNo  }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

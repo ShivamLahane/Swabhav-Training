@@ -1,0 +1,62 @@
+<br><br>
+<br><br>
+<h2 class="text-center">Add new Student</h2>
+<section ng-controller = "AddController">
+    <div class="container">
+        <form novalidate name="form">
+            <div class="form-group">
+                <label for="Name">Name :</label>
+                <input type="text" name = "name" class="form-control" required ng-model = 'student.name' ng-required = 'true'>
+                <span style = "color:red" ng-show = "form.name.$dirty && form.name.$invalid">
+                    <span ng-show = "form.name.$error.required">Name is required.</span>
+                 </span>
+            </div>
+
+            <div class="form-group">
+              <label for="Email">Email address :</label>
+              <input type="email" name="email" class="form-control" required ng-model = 'student.email' ng-required = 'true'>
+              <span style = "color:red" ng-show = "form.email.$dirty && form.email.$invalid">
+                <span ng-show = "form.email.$error.required">Email is required.</span>
+                <span ng-show = "form.email.$error.email">Invalid email address.</span>
+             </span>
+            </div>
+
+            <div class="form-group">
+                <label for="Roll No.">Roll No :</label>
+                <input type="number" name="rollNO" class="form-control" required ng-model = 'student.rollNo' ng-required = 'true'>
+                <span style = "color:red" ng-show = "form.rollNO.$dirty && form.rollNO.$invalid">
+                    <span ng-show = "form.rollNO.$error.required">Roll No is required.</span>
+                 </span>
+            </div>
+
+            <div class="form-group">
+                <label for="Date">Date :</label>
+                <input type="date" name="date" class="form-control" required ng-model = 'student.date' ng-required = 'true'>
+                <span style = "color:red" ng-show = "form.date.$dirty && form.date.$invalid">
+                    <span ng-show = "form.date.$error.required">Roll No is required.</span>
+                 </span>
+            </div>
+
+            <div>
+                <label for="Gender">Gender</label><br>
+                <br>
+                <label>Male</label>
+                <input type="radio" class="form-control" name = "isMale" ng-checked = 'student.isMale' ng-required = 'true'>
+                <label>Female</label>
+                <input type="radio" class="form-control" name = "isMale" ng-checked = '!student.isMale' ng-required = 'true'>
+            </div>
+
+            <div class="form-group">
+                <input type="range" min="1" max="100" required ng-model = 'student.age' ng-required = 'true'>
+                <label>{{ student.age }}</label>
+            </div>
+
+            <button type="button" class="btn btn-primary" 
+            ng-disabled = "form.name.$pristine && form.name.$invalid 
+            || form.email.$pristine && form.email.$invalid
+            || form.date.$pristine && form.date.$invalid
+            || form.rollNo.$pristine && form.rollNo.$invalid"
+            ng-click = "addStudentInfo()">Add</button>
+        </form>
+    </div>
+</section>

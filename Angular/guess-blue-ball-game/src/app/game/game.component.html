@@ -1,0 +1,25 @@
+<div [style.display] = 'ruleContainerDisplay' class="container border">
+
+    <!-- <h1 class="text-center"> Guess Blue Color Ball.</h1> -->
+    
+    <h2>Game Rules : </h2> <br>
+
+    <li>There will be many number of balls on the screen, 
+    all will be grey in color initially, but their true colors reveal only when you click them</li>
+    <li>You have to guess the blue color ball which will be only one among whole group.</li>
+    <li>When you click right side ball of blue ball (which you have to guess) , the clicked ball will turn green.</li>
+    <li>As you click left side ball of the blue ball, it will turn red.</li>
+    <li>You will have only 5 chances to guess. Best of Luck!!!</li>
+    <br> <br>
+
+    <input type="button" (click) = 'startGame()' class="btn btn-primary btn-lg" value = "Start">
+     
+  </div>
+
+  <div [style.display] = 'gameContainerDisplay' >
+    <input type="button" (click) = 'restartGame()' class="btn btn-primary btn-lg" value = "Restart">
+    <h2>{{ msg }}</h2>
+    <ng-container *ngFor="let ball of balls">
+      <input type="button" (click)="changeColorAndAnalyseResult(ball.number)" value="{{ball.number}}" [style.background-color]="ball.color" style="border-radius: 50%;">
+    </ng-container>
+  </div>

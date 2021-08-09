@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+  "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  <package name="main" extends="struts-default">
+    
+    <action name="add" class="com.techlab.actions.AddStudentAction">
+      <result name="success">
+        /views/register.jsp
+      </result>
+    </action>
+    
+     <action name="doAdd" class="com.techlab.actions.AddStudentAction" method = "doAdd">
+      <result name="success">
+        /views/students.jsp
+      </result>
+      <result name="error">
+        /views/register.jsp
+      </result>
+    </action>
+    
+  </package>
+</struts>

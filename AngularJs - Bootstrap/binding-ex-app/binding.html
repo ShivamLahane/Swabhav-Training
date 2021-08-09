@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Binding Example</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src='angular.js'></script>
+</head>
+<body ng-app = "mainModule">
+
+    <section ng-controller = "controllerMain">
+    
+        <p>{{ student.name }}</p>
+        <p>{{ student.rollNo }}</p>
+        <p>{{ student.email }}</p>
+        
+        <input type="text" ng-model = 'student.name'>
+        <input type="text" ng-model = 'student.rollNo'>
+        <input type="text" ng-model = 'student.email'>
+        
+    </section>
+    <script src="mainModule.js"></script>
+</body>
+</html>

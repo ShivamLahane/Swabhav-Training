@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>
+            guess blue button
+        </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="guessColorBall.css">
+
+    </head>
+
+    <body>
+
+        <div class="jumbotron"></div>
+
+        <div id = "rules-container" class="container border">
+
+            <h1 class="text-center"> Guess Blue Color Ball.</h1>
+            
+            <h2>Game Rules : </h2> <br>
+
+            <!-- Game rules -->
+
+            <li>There will be many number of balls on the screen, 
+            all will be grey in color initially, but their true colors reveal only when you click them</li>
+            <li>You have to guess the blue color ball which will be only one among whole group.</li>
+            <li>When you click right side ball of blue ball (which you have to guess) , the clicked ball will turn green.</li>
+            <li>As you click left side ball of the blue ball, it will turn red.</li>
+            <li>You will have only 5 chances to guess. Best of Luck!!!</li>
+            <br> <br>
+
+            <button id = "start" class="btn btn-primary btn-lg">Start</button>
+                
+        </div>
+
+        <div id = "game-container" class="container border" style= "display: none;">
+
+            <h3 id = "attempts-displayer" class="text-center"></h3>
+
+        </div>
+
+        <script src="guessGame.js"></script>
+    
+    </body>
+</html>

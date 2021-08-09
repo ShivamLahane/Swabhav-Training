@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix = "s" uri = "/struts-tags" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit</title>
+</head>
+<body>
+	<h1>Edit</h1>
+	<s:form action = 'doEdit'>
+		<s:hidden name = 'student.id'  label = 'rollNo'/>
+		<s:textfield name = 'student.rollNo' label = 'rollNo'/>
+		<s:textfield name = 'student.name' label = 'name'/>
+		<s:textfield name = 'student.cgpa' label = 'cgpa'/>
+		<s:textfield name = 'student.location' label = 'location'/>
+		<s:submit />
+	</s:form>
+	<p><s:property value= "error" /></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>An Interesting Title Goes Here</title>
+        <style> </style>
+
+    </head>
+
+    <body>
+        <p>
+            This is first paragraph.
+        </p>
+        <script>
+            window.setInterval(animationLoop, 1000/60);
+            function animationLoop() 
+            {
+                // animation-related code 
+                requestAnimationFrame(animationLoop);
+            }
+            // start off our animation loop!
+            animationLoop();
+        </script>
+
+    </body>
+
+</html>

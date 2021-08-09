@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 5.2.9//EN" "http://www.springframework.org/dtd/spring-beans-5.2.9.dtd">
+
+<beans>
+	<bean id = "triangle" class = "com.shivam.model.Triangle">
+		<constructor-args type = "int" value = "Equilateral"></constructor-args>
+	</bean>
+</beans>

@@ -1,0 +1,13 @@
+Git commands 				Function
+
+git status				Shows status.
+git status -s				Short status.
+git add	.				Add file to staging area.
+git cat-file -p SHA1HASH 4 digits			
+git cat-file -t
+git commit -m "message" 		Commit changes from staging to repository.
+git log 				Shows logs of current branch.
+git log --oneline			
+git log --oneline -all			Shows logs of all the branches line b
+touch x					Creates file named x.
+git checkout -f				gives last committed data.

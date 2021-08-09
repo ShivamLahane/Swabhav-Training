@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DI</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src='angular.js'></script>
+</head>
+<body ng-app = "modA">
+    <section ng-controller = 'controllerA'>
+        <h1>{{ message }}</h1>
+    </section>
+    <section ng-controller = 'controllerB'>
+        <h1>{{ message }}</h1>
+    </section>
+    <script src="moduleA.js"></script>
+    <script src="moduleB.js"></script>
+</body>
+</html>

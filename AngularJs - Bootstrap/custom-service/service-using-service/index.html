@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Service Using Service</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href=''>
+    <script src='angular.js'></script>
+</head>
+<body ng-app = "mathModule">
+    <section ng-controller = "mathController">
+        <input type="number" ng-model = "number">
+        <button type="button" ng-click = "square()">x<sup>2</sup></button>
+        <button type="button" ng-click = "cube()">x<sup>3</sup></button>
+        <p>Result : {{ result }}</p> 
+    </section>
+    <script src="module.js"></script> 
+    <script src="mathFactory.js"></script>   
+    <script src="mathService.js"></script>
+</body>
+</html>

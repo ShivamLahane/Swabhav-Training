@@ -1,0 +1,44 @@
+[{
+    "question" : "Which type of JavaScript language is ___",
+    "option1" : "Object-Oriented",
+    "option2" : "Object-Based",
+    "option3" : "Assembly-language",
+    "option4" : "High-level",
+    "answer" : "Object-Based"
+}
+,
+{
+    "question" : "In JavaScript, what is a block of statement?",
+    "option1" : "Conditional block",
+    "option2" : "block that combines a number of statements into a single compound statement",
+    "option3" : "both conditional block and a single statement",
+    "option4" : "block that contains a single statement",
+    "answer" : "block that combines a number of statements into a single compound statement"
+}
+,
+{
+    "question" : "The function and var are known as:",
+    "option1" : "Keywords",
+    "option2" : "Data types",
+    "option3" : "Declaration statements",
+    "option4" : "Prototypes",
+    "answer" : "Keywords"
+}
+,
+{
+    "question" : "Which of the following variables takes precedence over the others if the names are the same?",
+    "option1" : "Global variable",
+    "option2" : "The local element",
+    "option3" : "The two of the above",
+    "option4" : "None of the above",
+    "answer" : "Global variable"
+}
+,
+{
+    "question" : "Which of the following type of a variable is volatile?",
+    "option1" : "Mutable variable",
+    "option2" : "Dynamic variable",
+    "option3" : "Volatile variable",
+    "option4" : "Immutable variable",
+    "answer" : "Dynamic variable"
+}]

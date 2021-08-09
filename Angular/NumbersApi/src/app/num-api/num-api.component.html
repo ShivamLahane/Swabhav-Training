@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+    <h1>NumAPi</h1>
+</div>
+<section>
+    Enter no : <input type="number" [(ngModel)] = 'num'>
+    <input type="button" (click) = 'getFact()' value = 'Get Fact'>
+    <p>{{ msg }}</p>
+</section>
+
+<section>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Fact</th>
+                <th scope="col">Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let fact of facts; let i = index" [style.color] = 'fact.color'>
+                    <td>{{ fact.number }}</td>
+                    <td>{{ fact.fact }}</td>
+                    <td>{{ fact.dateTime }}</td>
+                    <td><input type="button" class="btn btn-primary" value = 'Delete' (click) = 'deleteFact(i)'></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

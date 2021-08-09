@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            task maintainer 
+        </title>
+        <link rel="stylesheet" href="taskCss.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+
+    <body>
+        
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <h2>To Do List</h2>
+                    
+                    <div class="container-fluid">
+                        <textarea id="txt" cols="40" rows="5"></textarea> 
+                        &nbsp;
+                        <button id = "add" class = "btn btn-lg btn-success">Add</button>
+                        <br><br>
+                    </div>
+    
+                    <ul id = "list">
+        
+                    </ul>
+    
+                </div>
+    
+                
+                <div class="col-md-6">
+    
+                    <h1>Dashboard</h1>
+                    <br>
+                    <br>
+
+                    <h3 id = "last-update-time"> </h3>
+
+                    <h3 id="count"></h3>
+
+                    <button id = "delete-all" class="btn btn-lg btn-danger">Delete All</button>
+                    
+                </div>
+    
+            </div>
+        </div>
+
+        <script src="Listener.js"></script>
+
+    </body>
+
+</html>

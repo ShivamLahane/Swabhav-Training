@@ -1,0 +1,38 @@
+<section ng-controller = 'ProductDetailsController'>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid bg-primary">
+              <div class="navbar-header">
+                <h4>Product Detail : {{ product.productName }}</h4>
+              </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p>Name :          {{ product.productName }}</p>
+                    <p>Code :          {{ product.productCode }}</p>
+                    <p>Release Date:   {{ product.releaseDate }}</p>
+                    <p>Description :   {{ product.description }}</p>
+                    <p>Price :         {{ product.price }}</p>
+                    <p>5 star rating : {{ product.starRating }}</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <img class="img-fluid" src= "{{ product.imageUrl }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid bg-primary">
+                <button ng-click = 'goBack()' class="btn btn-primary">Back</button>
+            </div>
+        </nav>
+    </div>
+
+</section>

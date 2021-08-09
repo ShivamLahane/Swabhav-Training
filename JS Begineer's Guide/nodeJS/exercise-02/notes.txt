@@ -1,0 +1,41 @@
+Global namespace problem solution :
+    - to make a function and put everything inside a function like methods and all the variables
+    - i.e. IIFE
+
+Imediately invoked function expression syntax :
+
+    1) First of all, define a function expression.
+           var myIIFE = function () 
+                        {
+                            //write your js code here
+                        };
+
+    2) Now, wrap it with parenthesis.   
+    (function () { write your js code here })();
+
+Advantages of IIFE:
+
+- Do not create unnecessary global variables and functions
+- Functions and variables defined in IIFE do not conflict with other functions & variables even if they have same name.
+- Organize JavaScript code.
+- Make JavaScript code maintainable.
+
+Local Storage limitations :
+
+-As easy as it is to use localStorage, it is also easy to misuse it. The following are limitations, and also ways to NOT use localStorage:
+- Do not store sensitive user information in localStorage
+- It is not a substitute for a server based database as information is only stored on the browser
+- localStorage is limited to 5MB across all major browsers
+- localStorage is quite insecure as it has no form of data protection and can be accessed by any code on your web page
+- localStorage is synchronous, meaning each operation called would only execute one after the other
+
+Session storage :
+
+- The sessionStorage object is used much less often than localStorage.
+- Properties and methods are the same, but it’s much more limited:
+- The sessionStorage exists only within the current browser tab.
+- Another tab with the same page will have a different storage.
+- But it is shared between iframes in the same tab (assuming they come from the same origin).
+- 
+
+The data survives page refresh, but not closing/opening the tab.

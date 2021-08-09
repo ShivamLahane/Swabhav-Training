@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>An Interesting Title Goes Here</title>
+        <style> </style>
+
+    </head>
+
+    <body>
+
+        <script>
+            var x = 300, y = 500;
+            function sendWarning(xPos, yPos)
+            {
+                if (xPos < x && yPos < y)
+                {
+                    alert("Adjust the positions.");
+                }
+                else
+                {
+                    alert("Things are fine");
+                }
+            }
+
+            xPos = 50;
+            yPos = 30;
+
+            sendWarning(xPos, yPos);
+        </script>
+
+    </body>
+
+</html>

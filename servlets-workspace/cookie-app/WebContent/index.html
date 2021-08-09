@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action = 'SetCookie' method = 'POST'>
+		<input type = 'text' name = 'color' required>
+		<input type ="submit">
+	</form>
+	    <button type="button" onclick="redirectToGetCookie()">Get Cookie</button>
+
+    <script>
+        function redirectToGetCookie()
+        {
+            window.location.href = 'http://localhost:8080/cookie-app/GetCookie';
+        }
+    </script>
+</body>
+</html>
